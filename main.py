@@ -6,6 +6,7 @@ from config.threads import cameraStart, serialStart, checkCamera, checkSerial, s
 from config.Keyboards import keyControll, keyCamera, keyArduino, keySettings, closeForImage
 from config.textGen import cameraInfo, arduinoInfo, configInfo
 from config.statisctic import createPlot
+from config.linux_commands import reload_service, git_update
 
 BOGDANS_ID = "348691140"
 bot = TeleBot("5820766754:AAEmxTSqYkB3Lgyv6YKgwNZWd58E5p5o8dM")
@@ -81,6 +82,8 @@ def settings(call : CallbackQuery):
     if call.data.split()[1] == "filter":
         if   call.data.split()[2] == "upper": bot.register_next_step_handler_by_chat_id(call.message.chat.id, conf.parseUpperFilter)
         elif call.data.split()[2] == "lower": bot.register_next_step_handler_by_chat_id(call.message.chat.id, conf.parseLowerFilter)
+    elif call.data.split()[1] == "restart": reload_service()
+    elif call.data.split()[1] == "update": bot.answer_callback_query(call, git_update())
 
 
 @bot.callback_query_handler(lambda call: call.data.split()[0] == "image")

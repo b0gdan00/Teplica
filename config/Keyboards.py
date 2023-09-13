@@ -43,7 +43,8 @@ def keyArduino(state):
 
 def keySettings(conf):
     keyboard = Keyboard()
-    keyboard.add(Button("🔄 Перезапуск серверу"))
+    keyboard.add(Button("🔄 Перезапуск серверу", callback_data="conf restart"))
+    keyboard.add(Button("👾 Оновлення версії коду", callback_data="conf update"))
     keyboard.add(Button("📤 Верхній рівень фільтру", callback_data="conf filter upper"))
     keyboard.add(Button("📥 Нижній рівень фільтру ", callback_data="conf filter lower"))
     keyboard.add(close)
