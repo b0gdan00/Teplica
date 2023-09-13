@@ -1,3 +1,5 @@
 /db.json
 /__pycache__
 db.sqlite
+*.pyc
+/config/__pycache__
