@@ -12,7 +12,7 @@ def reload_service():
     except Exception as e: print(f'[reload_service] Помилка: {e}')
 
 def git_update():
-    try: subprocess.check_call(['git', 'pull']); reload_service(); return "✅ Програма успішно оновлена"
+    try: subprocess.check_call(['git', "-C ~/Teplica", 'pull']); reload_service(); return "✅ Програма успішно оновлена"
     except Exception as e: print(f'[git_update] Помилка: {e}'); return "❌ Помилка оновлення"
     
  
