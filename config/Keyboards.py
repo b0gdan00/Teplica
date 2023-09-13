@@ -10,10 +10,10 @@ def closeForImage():
 
 def keyControll():
     keyboard = Keyboard()
-    keyboard.add(Button("📷       -- Камера -- 📷", callback_data="camera main"))
-    keyboard.add(Button("📟      -- Arduino -- 📟", callback_data="arduino main"))
+    keyboard.add(Button("📷 -- Камера -- 📷", callback_data="camera main"))
+    keyboard.add(Button("📟 -- Arduino -- 📟", callback_data="arduino main"))
     keyboard.add(Button("⚙️ -- Налаштування -- ⚙️", callback_data="settings main"))
-    keyboard.add(Button("📈   -- Статистика -- 📉", callback_data="statistic main"))
+    keyboard.add(Button("📈 -- Статистика -- 📉", callback_data="statistic main"))
     keyboard.add(close)
     return keyboard
 
