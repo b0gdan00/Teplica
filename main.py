@@ -39,7 +39,7 @@ def main(call : CallbackQuery):
         bot.edit_message_text(text, call.message.chat.id, call.message.message_id, reply_markup=keyArduino(state))
 
     elif com == "settings":
-        bot.edit_message_text(configInfo(conf), call.message.chat.id, call.message.message_id, reply_markup=keySettings(conf))
+        bot.edit_message_text(configInfo(conf), call.message.chat.id, call.message.message_id, reply_markup=keySettings())
 
     elif com == "statistic":
         createPlot()

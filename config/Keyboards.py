@@ -41,7 +41,7 @@ def keyArduino(state):
     keyboard.add(close)
     return keyboard
 
-def keySettings(conf):
+def keySettings():
     keyboard = Keyboard()
     keyboard.add(Button("🔄 Перезапуск серверу", callback_data="conf restart"))
     keyboard.add(Button("👾 Оновлення версії коду", callback_data="conf update"))
